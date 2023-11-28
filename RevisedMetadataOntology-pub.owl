@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#"
-     xml:base="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology.owl"
+     xml:base="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -19,14 +19,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#createsTypes -->
-
-    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#createsTypes">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Types"/>
-    </owl:ObjectProperty>
-
     
 
 
@@ -37,7 +29,6 @@
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#General"/>
         <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroup"/>
     </owl:ObjectProperty>
-
     
 
 
@@ -47,6 +38,27 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#General"/>
         <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#createsTypes -->
+
+    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#createsTypes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline"/>
+        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Types"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasAge -->
+
+    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Age"/>
     </owl:ObjectProperty>
     
 
@@ -70,84 +82,24 @@
     
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasCovariate -->
+
+    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasCovariate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasDiet -->
 
     <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasDiet">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroup"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Diet"/>
-    </owl:ObjectProperty>
-
-   <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasDiet">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
         <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Diet"/>
     </owl:ObjectProperty>
-
-
- <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasDiet">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Diet"/>
-    </owl:ObjectProperty>
-
-
- <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTreatment">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
-    </owl:ObjectProperty>
-
-
- <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasAge">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Age"/>
-    </owl:ObjectProperty>
-
- <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasType">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Types"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Type"/>
-    </owl:ObjectProperty>
-
-
-
- <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTemperature">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature"/>
-    </owl:ObjectProperty>
- 
-    
-     <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasOther">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Other"/>
-    </owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasAge">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Age"/>
-    </owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTreatment">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
-    </owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasCovariate">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate"/>
-    </owl:ObjectProperty>
- 
- 
- 
-    
-
     
 
 
@@ -157,6 +109,16 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Sample"/>
         <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Genotype"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasOther -->
+
+    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasOther">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Other"/>
     </owl:ObjectProperty>
     
 
@@ -186,6 +148,45 @@
     
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTemperature -->
+
+    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
+        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTimestamp -->
+
+    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTimestamp">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTreatment -->
+
+    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTreatment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Types"/>
+        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Type"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTypeDiet -->
 
     <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTypeDiet">
@@ -200,14 +201,11 @@
 
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#General"/>
-        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalSystem"/>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
         <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Diet"/>
+        <rdfs:range rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalSystem"/>
     </rdf:Description>
- 
+    
 
 
     <!-- 
@@ -218,23 +216,47 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#CellLine -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#CellLine">
+        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalCharacteristics"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
 
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Comment -->
 
     <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Comment">
         <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalCharacteristics"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalSystem"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Comment">
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Type"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
+    
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Concentration -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Concentration">
+        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Concentration_unit -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Concentration_unit">
+        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -251,7 +273,10 @@
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#End -->
 
     <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#End">
+        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -262,9 +287,48 @@
     
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Fasting -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Fasting">
+        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Diet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#FileType -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#FileType">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Frequency -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Frequency">
+        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Diet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics -->
 
     <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GlobalID -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GlobalID">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -277,59 +341,17 @@
     </owl:DatatypeProperty>
     
 
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Procedure">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Interruption_type -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Interruption_type">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
+    
 
 
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#FileType">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-
-
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Name">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Type"/>
-    </owl:DatatypeProperty>
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Name -->
-
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Name">
-        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#General"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Constant"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Value -->
-
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Value">
-        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Constant"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#PersonalID -->
-
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#PersonalID">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-<!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GlobalID -->
-
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GlobalID">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
- <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#LabID -->
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#LabID -->
 
     <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#LabID">
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
@@ -337,36 +359,20 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
- <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#UniqueGroup -->
- <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#UniqueGroup">
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Name">
+        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Constant"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#General"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Type"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-
-  <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#UniqueGroupReplicate -->
- <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#UniqueGroupReplicate">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
- <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SubSamplePresent -->
- <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SubSamplePresent">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-
-  <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SubSubSamplePresent -->
- <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SubSubSamplePresent">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-  
-
-
     
 
 
@@ -380,9 +386,6 @@
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
-
-
-
     
 
 
@@ -403,9 +406,26 @@
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#General"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
+    
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#PersonalID -->
 
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#PersonalID">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Procedure -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Procedure">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
 
 
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Sex -->
@@ -431,9 +451,32 @@
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Start -->
 
     <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Start">
+        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#DietType"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Genotype"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SubSamplePresent -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SubSamplePresent">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SubSubSamplePresent -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SubSubSamplePresent">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -445,66 +488,10 @@
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Age"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Diet"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Genotype"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Frequency -->
-
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Frequency">
-        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Diet"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Fasting -->
-
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Fasting">
-        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Diet"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Start -->
-  <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Start">
-        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#End -->
-  <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#End">
-        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
- 
-     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Concentration -->
-  <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Concentration">
-        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-
-     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Concentration_unit -->
-  <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Concentration_unit">
-        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
- 
- 
-
- 
-     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#CellLine -->
-
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#CellLine">
-        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalCharacteristics"/>
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalSystem"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
- 
     
 
 
@@ -528,11 +515,52 @@
     
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#UniqueGroup -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#UniqueGroup">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#UniqueGroupReplicate -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#UniqueGroupReplicate">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Value -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Value">
+        <rdfs:subPropertyOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#GeneralCharacteristics"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Constant"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#index -->
+
+    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#index">
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timestamp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
 
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#DietType"/>
         <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Genotype"/>
+        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timestamp"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </rdf:Description>
     
@@ -552,24 +580,30 @@
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Age -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Age"/>
-
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate -->
-
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate"/>
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature -->
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature"/>
-
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Constant -->
-
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Constant"/>
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature -->
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature"/>
     
 
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BloodIsolation -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BloodIsolation">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BoneMarrowIsolation -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BoneMarrowIsolation">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkATAC -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkATAC">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
+    </owl:Class>
     
 
 
@@ -589,28 +623,9 @@
     
 
 
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkRNAseq -->
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkProteomics -->
 
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkRNAseq">
-        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
-    </owl:Class>
-    
-    
-
-    
-
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkLipidomics -->
-
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkLipidomics">
-        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkMetabolomics -->
-
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkMetabolomics">
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkProteomics">
         <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
     </owl:Class>
     
@@ -619,6 +634,14 @@
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkRNAseq -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#BulkRNAseq">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#CITEseq -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#CITEseq">
         <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
     </owl:Class>
     
@@ -627,6 +650,14 @@
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#CODEX -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#CODEX">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ChIPseq -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ChIPseq">
         <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
     </owl:Class>
     
@@ -667,37 +698,41 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasComponent"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
+                <owl:onClass rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasComponent"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature"/>
+                <owl:onClass rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-     </owl:Class>
-
-
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline -->
-
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline"/>
+    </owl:Class>
     
 
 
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timestamp -->
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups -->
 
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timestamp"/>
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
     
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Constant -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Constant"/>
     
 
 
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ConstantMeasurement -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ConstantMeasurement"/>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Covariate"/>
     
 
 
@@ -716,11 +751,6 @@
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalSystem -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ExperimentalSystem"/>
-
-
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#ComparisonGroups"/>
-
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Types"/>
     
 
 
@@ -743,9 +773,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
-
-
     
 
 
@@ -754,22 +781,34 @@
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Genotype"/>
     
 
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Type -->
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Type"/>
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#HeartIsolation -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#HeartIsolation">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#LiverIsolation -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#LiverIsolation">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#LungIsolation -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#LungIsolation">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
+    </owl:Class>
+    
 
 
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#MeasuredSample"/>
- <!--       <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasSpecificMeasurement"/>
-                <owl:someValuesFrom rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
--->
     
 
 
@@ -792,6 +831,22 @@
     
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#OtherIsolation -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#OtherIsolation">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#OtherMeasurement -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#OtherMeasurement">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
+    </owl:Class>
+    
+
+
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
@@ -808,7 +863,9 @@
 
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SingleCellRNASeq -->
 
-    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SingleCellRNASeq"/>
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SingleCellRNASeq">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
+    </owl:Class>
     
 
 
@@ -823,6 +880,14 @@
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SplitProcedure -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SplitProcedure">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
+    </owl:Class>
     
 
 
@@ -842,69 +907,72 @@
     
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Temperature"/>
+    
+
+
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#TimeSection -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#TimeSection"/>
     
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline"/>
+    
+
+
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timestamp -->
+
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timestamp"/>
+    
+
+
     <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment -->
 
     <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Treatment"/>
-
- 
-
- 
- 
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology-3#hasTimestamp -->
-
-    <owl:ObjectProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#hasTimestamp">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline"/>
-    </owl:ObjectProperty>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Type -->
 
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Type"/>
     
 
 
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Interruption_type -->
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Types -->
 
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Interruption_type">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timeline"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Types"/>
     
 
 
-    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#index -->
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Western_blots -->
 
-    <owl:DatatypeProperty rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#index">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timestamp"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Western_blots">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
+    </owl:Class>
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#WhiteAdiposeTissueIsolation -->
 
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
-        <rdfs:domain rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Timestamp"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#WhiteAdiposeTissueIsolation">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#Preparation"/>
+    </owl:Class>
     
 
 
+    <!-- http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#organelleProteomics -->
 
-    </rdf:RDF>
+    <owl:Class rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#organelleProteomics">
+        <rdfs:subClassOf rdf:resource="http://iru-code.iaas.uni-bonn.de/ontologies/v1/metadata-ontology#SpecificMeasurement"/>
+    </owl:Class>
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
 
