@@ -7,7 +7,10 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:metadata-ontology="http://iru-code.iaas.uni-bonn.de/ontologies/v1.8.0/metadata-ontology#">
-    <owl:Ontology rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1.8.0/metadata-ontology"/>
+
+<owl:Ontology rdf:about="http://iru-code.iaas.uni-bonn.de/ontologies/v1.8.0/metadata-ontology">
+<owl:versionInfo> v1.8.0 </owl:versionInfo>
+</owl:Ontology>
     
 
 
